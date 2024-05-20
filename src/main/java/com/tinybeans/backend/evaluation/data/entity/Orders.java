@@ -1,14 +1,10 @@
 package com.tinybeans.backend.evaluation.data.entity;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 import org.hibernate.annotations.Type;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -18,8 +14,11 @@ import java.util.List;
  */
 @Entity @Data @ToString(exclude={"paymentId"})
 @EqualsAndHashCode(callSuper = true)
+@Builder @AllArgsConstructor @NoArgsConstructor
+@Table(name = "Orders_Table")
 public class Orders extends BaseEntity {
 
+    @JsonIgnore
     @ManyToMany
     private List<Item> items;
 
