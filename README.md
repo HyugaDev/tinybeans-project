@@ -4,7 +4,20 @@
 This repository is setup using the following technologies:
 - Spring boot
 - MySQL 5.x
-- Java 11
+- Java 11 
+- Docker Desktop
+- Docker and docker compose (Ubuntu specific)
+
+## How to run it
+This repo is setup using docker containers with docker-compose. To run it properly you will need
+
+To start the app simply run the command
+
+`docker-compose up --build`
+
+NOTE: ports 3306 & 8080 must be available for it to run
+
+After startup you can test that Spring Boot is running by going to `http://localhost:8080` and if opting to use react you can verify its up and running by going to `http://localhost:3000/`
 
 ## Requirements
 1. Customer can see a list of products.
