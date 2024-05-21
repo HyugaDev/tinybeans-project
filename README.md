@@ -9,7 +9,7 @@ This repository is setup using the following technologies:
 - Docker and docker compose (Ubuntu specific)
 
 ## How to run it
-This repo is setup using docker containers with docker-compose. To run it properly you will need
+This repo is setup using docker containers with docker-compose. To run it properly you will need to create a `.env` file in main directory, copy paste the `.env.template` into `.env` and replace the env variables according to your setup.
 
 To start the app simply run the command
 
@@ -26,9 +26,6 @@ After startup you can test that Spring Boot is running by going to `http://local
 4. Customer want to see confirmation that I’ve paid for the product.
 
 ## Backend
-### ENV setup
-Please create a .env file in main directory, copy paste the .env.template into .env and replace the env variables according to your setup. Now, Build the Java project, it will run by default on port 8080
-
 ### Models
 1. Product
 2. Order
@@ -53,7 +50,7 @@ All proper validations has been applied on fields.
 2. `GET /api/v1/items/{id}` Retrieve an item by this id
 
 ## Frontend
-### Setup
+### Local Setup without docker
 Please run the following:
 1. npm i
 2. npm start
